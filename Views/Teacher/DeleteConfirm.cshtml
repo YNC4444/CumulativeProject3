@@ -1,0 +1,16 @@
+﻿@model CumulativeProject3.Models.Teacher
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<div id="containerShow">
+    <nav>
+        <a class="nav-link" href="/Teacher/Show/@Model.TeacherId">Cancel</a>
+    </nav>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprabook.com%2Fweb%2Fshow-photo.jpg%3Fid%3D1918927&f=1&nofb=1&ipt=3fa2c0fc7b0c0ab9d744a7e7b763a8f6c7ef0afe9e463e306b9ed2f2c1862c6a&ipo=images" />
+    <h2>Are you sure you want to delete @Model.TeacherFname @Model.TeacherLname?</h2>
+    <p>This action is permanent.</p>
+    <form method="POST" action="/Teacher/Delete/@Model.TeacherId">
+        <button class="delButton">Confirm Delete</button>
+    </form>
+</div>
